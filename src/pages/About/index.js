@@ -1,8 +1,9 @@
 import PostTemplate from "components/PostTemplate";
+import BannerImage from 'assets/banner.jpg';
 
 export default function About() {
   return (
-    <PostTemplate title="Sobre a Porcelanarte..." image="/assets/banner.jpg">
+    <PostTemplate title="Sobre a Porcelanarte..." image={BannerImage}>
       <p>
         A <strong>Porcelanarte</strong> nasceu da paixão pela porcelana e da vontade de compartilhar esse universo com todos que se interessam por arte, história e criatividade. Nosso blog é um ponto de encontro para apreciadores e profissionais que desejam explorar as múltiplas facetas desse material nobre, presente na história da humanidade há mais de mil anos. Aqui, acreditamos que a porcelana é mais do que um simples material cerâmico — ela é uma forma de expressão artística e cultural que atravessa gerações, estilos e fronteiras.
       </p>
