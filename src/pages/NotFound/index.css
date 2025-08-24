@@ -14,4 +14,8 @@
         line-height: 4rem;
         font-family: var(--secondary-font-family);
     }
+
+    p {
+        margin-bottom: 2.5rem;
+    }
 }

@@ -1,3 +1,4 @@
+import Button from 'components/Button';
 import './index.css';
 
 export default function NotFound() {
@@ -6,6 +7,7 @@ export default function NotFound() {
         <h2>404</h2>
         <h1>Ops! Página não encontrada!</h1>
         <p>A página que você está procurando não existe ou foi removida.</p>
+        <Button href="/">Voltar para a página inicial</Button>
     </section>
   );
 }

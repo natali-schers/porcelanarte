@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './index.css';
+import Button from 'components/Button';
 
 export default function PostCard({ post }) {
   return (
@@ -7,7 +8,7 @@ export default function PostCard({ post }) {
       <div className='post'>
         <img className='thumbnail' src={`/assets/posts/${post.id}/thumbnail.png`} alt={post.title} />
         <h2 className='title'>{post.title}</h2>
-        <a className='btn' href={`/posts/${post.id}`}>Ler</a>
+        <Button href={`/posts/${post.id}`}>Ler</Button>
       </div>
     </Link>
   );

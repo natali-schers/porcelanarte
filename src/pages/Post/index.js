@@ -4,6 +4,8 @@ import posts from 'json/posts.json';
 import PostTemplate from "components/PostTemplate";
 import ReactMarkdown from "react-markdown";
 import NotFound from 'pages/NotFound';
+import { Routes, Route } from "react-router-dom";
+import Layout from "components/Layout";
 
 export default function Post() {
     const params = useParams();
@@ -19,10 +21,19 @@ export default function Post() {
     }
 
     return (
-        <PostTemplate title={post.title} image={`/assets/posts/${post.id}/thumbnail.png`}>
-            <div className='post-markdown-container'>
-                <ReactMarkdown>{post.text}</ReactMarkdown>
-            </div>
-        </PostTemplate>
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route
+                    index
+                    element={
+                        <PostTemplate title={post.title} image={`/assets/posts/${post.id}/thumbnail.png`}>
+                            <div className='post-markdown-container'>
+                                <ReactMarkdown>{post.text}</ReactMarkdown>
+                            </div>
+                        </PostTemplate>
+                    }
+                />
+            </Route>
+        </Routes>
     );
 }
