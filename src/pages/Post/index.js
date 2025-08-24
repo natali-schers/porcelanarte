@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import posts from 'json/posts.json';
 import PostTemplate from "components/PostTemplate";
 import ReactMarkdown from "react-markdown";
+import NotFound from 'pages/NotFound';
 
 export default function Post() {
     const params = useParams();
@@ -10,6 +11,12 @@ export default function Post() {
     const post = posts.find((post) => {
         return post.id === Number(params.id);
     });
+
+    if (!post) {
+        return (
+            <NotFound />
+        );
+    }
 
     return (
         <PostTemplate title={post.title} image={`/assets/posts/${post.id}/thumbnail.png`}>

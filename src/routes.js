@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Footer from "components/Footer/footer";
 import Layout from "components/Layout";
 import Post from "pages/Post";
+import NotFound from "pages/NotFound";
 
 function AppRoutes() {
   return (
@@ -18,7 +19,7 @@ function AppRoutes() {
           <Route path="posts/:id" element={<Post/>} />
         </Route>
 
-        <Route path="*" element={<div>Ops... Página não encontrada :(</div>} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
 
       <Footer />
